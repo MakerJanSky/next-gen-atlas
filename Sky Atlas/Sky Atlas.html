@@ -6930,224 +6930,17 @@
         <tr>
           <td>
             <dfn>A.3.5
-              - A1 - Surplus Buffer And Smart Burn Engine - Surplus Buffer Upper Limit</dfn>
+              - A1 - Surplus Buffer And Smart Burn Engine - Surplus Buffer Splitter Parameters</dfn>
           </td>
-          <td>Surplus Buffer And Smart Burn Engine - Surplus Buffer Upper Limit</td>
+          <td>Surplus Buffer And Smart Burn Engine - Surplus Buffer Splitter Parameters</td>
           <td>Section</td>
-          <td>This Section defines the Surplus Buffer Upper Limit and key parameters of the Smart Burn Engine.
+          <td>The current Surplus Buffer Splitter parameters are:• splitter.hump: 60m (Threshold of Surplus buffer for Splitter to activate)•
+              Estimated Net protocol Income: 100,765,523• 50% of estimated net protocol income is sent to Splitter: 50,382,762 (for SBE and 
+              Seal Module, remaining 50% is accumulated in Surplus Buffer). This value must be regularly updated through an executive vote to 
+              continue to target 50% of the estimated net protocol income.• splitter.bump: 25,000 DAI• splitter.hop: 15,649 seconds• 70% of 
+              Splitter allocation is set to accumulate SKY• 30% of Splitter allocation is set to reward Seal users• burn (the percentage of 
+              the vow.bump to be moved to the underlying flapper): 70% (0.70 * WAD). Flapper must maintain its legacy values.</td>
           </td>
-        </tr>
-        <tr>
-          <td>
-            <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters</dfn>
-          </td>
-          <td>Surplus Buffer And Smart Burn Engine - Parameters</td>
-          <td>Core</td>
-          <td>The amount of USDS in the Surplus Buffer that causes the Smart Burn Engine to activate, and the rate
-            at which it uses the USDS to improve SKY liquidity, are determined by two parameters defined by the
-            following subdocuments. The Smart Burn Engine, which defines specific parameter configuration
-            requirements of DssFlapper, and how it should be altered are also defined in the following
-            subdocuments.</td>
-        </tr>
-        <tr>
-          <td>
-            <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters - Upper Limit</dfn>
-          </td>
-          <td>Surplus Buffer And Smart Burn Engine - Parameters - Upper Limit</td>
-          <td>Core</td>
-          <td>The Surplus Buffer Upper Limit determines the amount of USDS necessary for the Smart Burn Engine to
-            activate.</td>
-        </tr>
-        <tr>
-          <td>
-            <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters - Upper Limit Amount</dfn>
-          </td>
-          <td>Surplus Buffer And Smart Burn Engine - Parameters - Upper Limit Amount</td>
-          <td>Core</td>
-          <td>The Surplus Buffer Upper Limit is: 55 million USDS</td>
-        </tr>
-        <tr>
-          <td>
-            <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters - SKY Accumulation</dfn>
-          </td>
-          <td>Surplus Buffer And Smart Burn Engine - Parameters - SKY Accumulation</td>
-          <td>Core</td>
-          <td>The Smart Burn Engine can switch between accumulating SKY/USDS liquidity and directly accumulating
-            SKY only.The Stability Facilitators can trigger a switch from one mode of accumulation to the other,
-            based on market factors and input from the Stability Scope Advisors.By default, the Smart Burn
-            Engine must be switched to directly accumulating SKY only.</td>
-        </tr>
-        <tr>
-          <td>
-            <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters - Rate Of SKY Accumulation</dfn>
-          </td>
-          <td>Surplus Buffer And Smart Burn Engine - Parameters - Rate Of SKY Accumulation</td>
-          <td>Core</td>
-          <td>The rate of SKY Accumulation should target the approximate net surplus income rate of the Sky
-            Protocol. The Stability Facilitators must regularly update the relevant Smart Burn Engine
-            parameters, in consultation with the Stability Scope Advisors, to ensure they continuously track the
-            net surplus income rate.Stability Facilitators should aim to slightly underestimate the net surplus
-            income rate. This approach allows the Surplus Buffer to slowly grow above its upper limit, while
-            ensuring that most of the net surplus income is used by the Smart Burn Engine, Activation, and
-            Sealing.</td>
-        </tr>
-        <tr>
-          <td>
-            <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters - SKY Maximum Price</dfn>
-          </td>
-          <td>Surplus Buffer And Smart Burn Engine - Parameters - SKY Maximum Price</td>
-          <td>Core</td>
-          <td>If the SKY price surpasses 0.33 USD, the Smart Burn Engine must be turned off, and the Surplus
-            Buffer Upper Limit set to infinity via an Executive Vote.</td>
-        </tr>
-        <tr>
-          <td>
-            <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters - DssFlapper</dfn>
-          </td>
-          <td>Surplus Buffer And Smart Burn Engine - Parameters - DssFlapper</td>
-          <td>Core</td>
-          <td>DssFlapper is the current implementation of the contract which processes Smart Burn Engine
-            transactions once activated. The DssFlapper includes the following parameters: hop, want, bump, pip
-            and receiver. Stability Facilitators can propose DssFlapper reconfiguration within limits defined in
-            each parameter's corresponding document. The Stability Facilitators can propose these changes
-            directly to an Executive Vote, with the exception of the receiver and pip . These parameters always
-            require a Governance Poll, unless the Sky Protocol is in a state of emergency, such that the
-            expedited modification of parameters is necessary to prevent loss of funds.</td>
-        </tr>
-        <tr>
-          <td>
-            <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters - Hop Parameter</dfn>
-          </td>
-          <td>Surplus Buffer And Smart Burn Engine - Parameters - Hop Parameter</td>
-          <td>Core</td>
-          <td>
-            Flapper.hop: Minimum seconds interval between kicks.Determines maximum allowed frequency of
-            transactions taking place.Maximum hop must be set to equal the approximate Effective Rate of MKR
-            Accumulation defined in <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters</dfn> depending on the corresponding
-            configuration of bump parameter.
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters - Hop Parameter Amount Of Seconds</dfn>
-          </td>
-          <td>Surplus Buffer And Smart Burn Engine - Parameters - Hop Parameter Amount Of Seconds</td>
-          <td>Core</td>
-          <td>The hop parameter is: 11,635 seconds</td>
-        </tr>
-        <tr>
-          <td>
-            <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters - Want Parameter</dfn>
-          </td>
-          <td>Surplus Buffer And Smart Burn Engine - Parameters - Want Parameter</td>
-          <td>Core</td>
-          <td>Flapper.want: Relative multiplier of the oracle price needed for the swap.For example, 0.98 * WAD
-            allows for a 2% worse price than the MKR/USD reference oracle (pip) price used in the system. want
-            must not exceed 2%.</td>
-        </tr>
-        <tr>
-          <td>
-            <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters - Want Parameter Number</dfn>
-          </td>
-          <td>Surplus Buffer And Smart Burn Engine - Parameters - Want Parameter Number</td>
-          <td>Core</td>
-          <td>The want parameter is: 0.98</td>
-        </tr>
-        <tr>
-          <td>
-            <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters - Bump Parameter</dfn>
-          </td>
-          <td>Surplus Buffer And Smart Burn Engine - Parameters - Bump Parameter</td>
-          <td>Core</td>
-          <td>Vow.bump: Minimum amount of Dai above Surplus Buffer Upper Limit required for eligible market
-            transaction. bump is the amount of Dai used to get MKR. The bump should be set to minimize both
-            price impact and transaction costs, based on an analysis of network conditions provided by the
-            Stability Scope Advisors and the anticipated outlook for these factors.</td>
-        </tr>
-        <tr>
-          <td>
-            <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters - Bump Parameter Amount</dfn>
-          </td>
-          <td>Surplus Buffer And Smart Burn Engine - Parameters - Bump Parameter Amount</td>
-          <td>Core</td>
-          <td>The bump parameter is: 25,000 DAI</td>
-        </tr>
-        <tr>
-          <td>
-            <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters - Pip Parameter</dfn>
-          </td>
-          <td>Surplus Buffer And Smart Burn Engine - Parameters - Pip Parameter</td>
-          <td>Core</td>
-          <td>Flappers.pip: A reference price oracle, used for bounding the exchange rate of the swap.</td>
-        </tr>
-        <tr>
-          <td>
-            <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters - Pip Parameter Address</dfn>
-          </td>
-          <td>Surplus Buffer And Smart Burn Engine - Parameters - Pip Parameter Address</td>
-          <td>Core</td>
-          <td>The pip parameter is: 0x61A12E5b1d5E9CC1302a32f0df1B5451DE6AE437</td>
-        </tr>
-        <tr>
-          <td>
-            <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters - Receiver Parameter</dfn>
-          </td>
-          <td>Surplus Buffer And Smart Burn Engine - Parameters - Receiver Parameter</td>
-          <td>Core</td>
-          <td>receiver: address which will receive the Univ2 MKR/Dai LP token.</td>
-        </tr>
-        <tr>
-          <td>
-            <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters - Receiver Parameter Address</dfn>
-          </td>
-          <td>Surplus Buffer And Smart Burn Engine - Parameters - Receiver Parameter Address</td>
-          <td>Core</td>
-          <td>The receiver parameter is:MCD_PAUSE_PROXY: 0xBE8E3e3618f7474F8cB1d074A26afFef007E98FB</td>
-        </tr>
-        <tr>
-          <td>
-            <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters - Parameter Reconfiguration Methodology &
-              Frequency</dfn>
-          </td>
-          <td>Surplus Buffer And Smart Burn Engine - Parameters - Parameter Reconfiguration Methodology &
-            Frequency</td>
-          <td>Core</td>
-          <td>Via the first available Executive Vote, the Stability Facilitators must update the Smart Burn Engine
-            Dss Flapper related parameters based on cost optimization analyses provided by the Stability Scope
-            Advisors. Due to the volatility of market impact and gas consumption, which are key factors in cost
-            optimization, there is no fixed frequency for these updates. The Scope Advisors are responsible for
-            continuously monitoring the Smart Burn Engine and notifying the Stability Facilitators when changes
-            are needed. This notification must include the relevant analysis and proposed parameter adjustments
-            within the established limits and boundaries defined by the Stability Scope.</td>
-        </tr>
-        <tr>
-          <td>
-            <dfn>A.3.5
-              - Surplus Buffer And Smart Burn Engine - Parameters - Migration</dfn>
-          </td>
-          <td>Surplus Buffer And Smart Burn Engine - Parameters - Migration</td>
-          <td>Core</td>
-          <td>The Smart Burn Engine and corresponding liquidity must be migrated to USDS/SKY when this is
-            technically available.</td>
         </tr>
         <tr>
           <td>
@@ -8632,6 +8425,24 @@
           <td>Core</td>
           <td>The Sealing Exit Fee starts at 5%, and increases by 1% every six (6) months from launch, until it
             reaches its permanent long-term value at 15%.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.4.4
+              - Activation And Sealing Mechanisms - Sealing - USDS generation Risk Parameters</dfn>
+          </td>
+          <td>Activation And Sealing Mechanisms - Sealing - USDS generation Risk Parameters</td>
+          <td>Core</td>
+          <td>The current LSE-MKR-A & Liquidation parameters are:• Cut: 0.99• Step: 60 seconds• Buf: 1.20•
+           Cusp: 0.40• Tail: 6,000 seconds• Chip: 0.1%• Tip: 300 DAI• Calc: StairstepExponentialDecrease• 
+            Ilk.chop: 8%• Tolerance: 0.5• Dust: 30,000 DAI• Ilk.hole: 3M DAI• Stability Fee: 12%•
+            spotter[ilk].mat (Liquidation Ratio): 200%• DC-IAM line: Initially, the parameter is set to 20 million. 
+            After launch of the Seal Engine the DC-IAM line parameter must be dynamically set, through executive 
+            votes at regular intervals, to be equivalent to the amount of USDS in the Surplus Buffer minus 20 million, 
+            OR if the USDS contents of the Smart Burn Engine fall below 30 million it must be set to 0.• DC-IAM gap: 5M•
+            DC-IAM ttl: 16h• Add Seal Module to LineMom GSM Exception<br>Other Seal Module Params:• farms (Whitelisted set 
+            of farms to choose from): LsMkrUsdsFarm• fee - (Exit Fee): 5%<br>StakingRewards:• rewardsDistribution: Set to the Splitter•
+            rewardsDuration: 15,649 seconds</td>
         </tr>
         <tr>
           <td>
