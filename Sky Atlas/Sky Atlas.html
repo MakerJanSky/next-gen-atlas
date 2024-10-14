@@ -7204,12 +7204,13 @@
           </td>
           <td>Measures For Endgame Transition - Native Vault Engine - Liquidation Ratio</td>
           <td>Core</td>
-          <td>The Liquidation Ratio parameter limits the maximum amount of Dai debt that a vault user can draw
-            from their vault given the value of their collateral locked in that vault. In practice, it expresses
-            the minimum collateral in percentage terms that can support a given Dai debt. If the ratio of a
-            Vault user's collateral to their debt drops below this value, their vault can be liquidated. Each
-            vault type has its own Liquidation Ratio. The Liquidation Ratio for each vault type is expressed as
-            a percentage value of the collateral that must be present in the vault to support its debt.</td>
+          <td>The Liquidation Ratio parameter limits the maximum amount of Dai debt that a vault user can 
+            draw from their vault given the value of their collateral locked in that vault. In practice, it 
+            expresses the minimum collateral in percentage terms that can support a given Dai debt. If the ratio 
+            of a Vault user’s collateral to their debt drops below this value, their vault can be liquidated. Each 
+            vault type has its own Liquidation Ratio. The Liquidation Ratio for each vault type is expressed as a 
+            percentage value of the collateral that must be present in the vault to support its debt.<br>Changes to 
+            the Liquidation Ratio are subject to the Operational Weekly Cycle, requiring a Governance Poll followed by an Executive Vote.</td>
         </tr>
         <tr>
           <td>
@@ -7519,6 +7520,17 @@
           <td>Core</td>
           <td>The processes for offboarding Native Vault Engine collateral are defined in the subdocuments herein.
           </td>
+        <tr>
+          <td>
+            <dfn>A.3.9
+              - Measures For Endgame Transition - Native Vault Engine - Collateral Offboarding - Collateral Offboarding Process</dfn>
+          </td>
+          <td>Measures For Endgame Transition - Native Vault Engine - Collateral Offboarding - Collateral Offboarding Process</td>
+          <td>Core</td>
+          <td>The Stability Facilitators, in consultation with the Stability Scope Advisors, must use the Operational Weekly Cycle to 
+            offboard Native Vault Engine collateral pursuant to A.3.9 - Measures For Endgame Transition - Native Vault Engine - 
+            Collateral Offboarding and its subdocuments.
+          </td>
         </tr>
         <tr>
           <td>
@@ -7581,11 +7593,12 @@
           <td>Measures For Endgame Transition - Native Vault Engine - Updates</td>
           <td>Core</td>
           <td>
-            If not otherwise specified, the Stability Facilitators have the ability to trigger an Executive Vote
-            to update any of the parameters defined in <dfn>A.3.9
+             If not otherwise specified, the Stability Facilitators have the ability to modify any of the parameters defined in <dfn>A.3.9
               - Measures For Endgame Transition - Native Vault Engine - Risk Parameter Definitions</dfn> for any
             of the Vault Types in <dfn>A.3.9
-              - Measures For Endgame Transition - Native Vault Engine - Vault Types</dfn>.
+              - Measures For Endgame Transition - Native Vault Engine - Vault Types</dfn>. As a general rule, the modification of said parameters 
+            is pursuant to the Operational Weekly Cycle and can be effected directly via an Executive Vote, without requiring a Governance Poll. 
+            Exceptions to this general rule must be clearly stated in the relevant Atlas document.
           </td>
         </tr>
         <tr>
@@ -7719,6 +7732,17 @@
             Executive Votes, with risk parameters defined by the Stability Facilitators. These parameters should
             be based on input from the Stability Scope Advisors and should best serve the needs of the Sky
             Ecosystem and its collaboration with other protocols.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.3.9
+              - Measures For Endgame Transition - SparkLend Collateral Onboarding/Offboarding</dfn>
+          </td>
+          <td>Measures For Endgame Transition - SparkLend Collateral Onboarding/Offboarding </td>
+          <td>Core</td>
+          <td>The onboarding/offboarding of SparkLend collateral is temporarily controlled by Sky Core. It is 
+            implemented by the Stability Facilitators, in consultation with the Stability Scope Advisors, 
+            through the Operational Weekly Cycle.</td>
         </tr>
         <tr>
           <td>
@@ -7979,12 +8003,16 @@
           <td>Measures For Endgame Transition - SparkLend Risk Parameters - Modification</td>
           <td>Core</td>
           <td>
-            The Stability Facilitators, in consultation with the Stability Scope Advisors, may recommend changes
-            to any of the parameters specified in the subdocuments of <dfn>A.3.9
+            The Stability Facilitators, in consultation with the Stability Scope Advisors, may recommend changes to 
+            any of the parameters specified in the subdocuments of<dfn>A.3.9
               - Measures For Endgame Transition - SparkLend Risk Parameters - Definitions</dfn> or <dfn>A.3.9
               - Measures For Endgame Transition - SparkLend Risk Parameters - Cap Automator Parameter
-              Definitions</dfn>.These changes will be subject to an Executive Vote through the Weekly Governance
-            Cycle.
+              Definitions</dfn>.<br>As a general rule, the modification of said parameters is pursuant to the Operational 
+            Weekly Cycle and can be effected directly via an Executive Vote, without requiring a Governance Poll.<br>Changes 
+            to the parameters defined in the following documents are exceptions to the general rule and require a Governance 
+            Poll followed by an Executive Vote:• <dfn>A.3.9
+              - Measures For Endgame Transition - SparkLend Risk Parameters -  Liquidation Threshold Definition</dfn>• <dfn>A.3.9
+              - Measures For Endgame Transition - SparkLend Risk Parameters -  Liquidation Bonus Definition</dfn>
           </td>
         </tr>
         <tr>
