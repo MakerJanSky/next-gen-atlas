@@ -2070,10 +2070,23 @@
           </td>
           <td>Aligned Delegates - Budget And Participation Requirements - AD Buffer And Loss Of Budget Stream</td>
           <td>Section</td>
-          <td>If an AD loses a part of its budget stream due to a transition from Prime Delegate (PD) to Aligned
-            Delegate (AD), their AD Buffer will stay paying out its excess funds until the remaining balance
-            equals one month's budget allocation. If an AD loses its entire budget stream, the full contents of
-            the AD Buffer can be spent.</td>
+          <td>If an AD loses its budget due to losing its Prime Delegate rank, the full contents of the AD Buffer 
+            can be paid out in the next AD compensation cycle**,** except as specified in A.1.5 - Aligned Delegates - 
+            Budget And Participation Requirements - Payout Limitations For ADs Triggering Atlas Edit Weekly Cycle Proposals.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.5
+              - Aligned Delegates - Budget And Participation Requirements - AD Buffer And Loss Of Budget
+              Stream - Payout Limitations For ADs Triggering Atlas Edit Weekly Cycle Proposals</dfn>
+          </td>
+          <td>Aligned Delegates - Budget And Participation Requirements - AD Buffer And Loss Of Budget Stream - Payout Limitations 
+            For ADs Triggering Atlas Edit Weekly Cycle Proposals</td>
+          <td>Section</td>
+          <td>If an AD has triggered an Atlas Edit Weekly Cycle Proposal pursuant to A.1.11 - Weekly Governance Cycle - Atlas Edit 
+            Weekly Cycle - Triggering Requirement, no payouts may be made that would reduce their AD Buffer below one (1) month’s 
+            worth of the budget specified in A.1.5 - Aligned Delegates - Budget And Participation Requirements - Budget Amount For 
+            Prime Delegate Slots until the Proposal has been voted on or rejected by the Governance Facilitators for misalignment.</td>
         </tr>
         <tr>
           <td>
@@ -3249,18 +3262,18 @@
           <td>Weekly Governance Cycle - Atlas Edit Weekly Cycle - Triggering Requirement</td>
           <td>Core</td>
           <td>
-            An Atlas Edit Weekly Cycle Proposal (also "Weekly Cycle Proposal" or "Proposal") can proceed to a
-            vote only if it is triggered by a Prime Delegate whose AD buffer contains at least one (1) month's
-            worth of budget. The value of this threshold in USDS is currently specified in <dfn>A.1.5
+            An Atlas Edit Weekly Cycle Proposal (also “Weekly Cycle Proposal” or “AEW Proposal”) can proceed to 
+            a vote only if it is triggered by a Prime Delegate whose AD Buffer contains at least one (1) month’s 
+            worth of budget at the time of triggering the Proposal. The value of this threshold in USDS is currently 
+            specified in <dfn>A.1.5
               - Aligned Delegates - Budget And Participation Requirements - Budget Amount For Prime Delegate
-              Slots</dfn>.Aligned Delegates (including Prime Delegates) are prohibited from authoring an Atlas
-            Edit Weekly Cycle Proposal. Prime Delegates are limited to triggering Proposals authored by others.
-            To trigger a Proposal, the Prime Delegate must post a reply to the Author's Weekly Cycle Proposal on
-            the Forum. The Prime Delegate's post should signal their intent to trigger the Weekly Cycle
-            Proposal. Where more than one Prime Delegate posts an intention to trigger a Weekly Cycle Proposal,
-            the first Prime Delegate to post a reply to the Author's Forum post shall be treated as the
-            triggering Prime Delegate.If the Weekly Cycle Proposal is subsequently voted down, the triggering
-            Prime Delegate loses their entire AD buffer.
+              Slots</dfn>. The Governance Facilitators are responsible for confirming that these requirements are met.<br>Aligned 
+            Delegates (including Prime Delegates) are prohibited from authoring an Atlas Edit Weekly Cycle Proposal. Prime Delegates 
+            are limited to triggering Proposals authored by others. To trigger a Proposal, the Prime Delegate must post a reply to 
+            the Author’s Weekly Cycle Proposal on the Forum. The Prime Delegate’s post should signal their intent to trigger 
+            the Weekly Cycle Proposal.<br>Where more than one Prime Delegate posts an intention to trigger a Weekly Cycle Proposal, 
+            the first Prime Delegate to post a reply to the Author’s Forum post shall be treated as the triggering Prime Delegate.<br>If 
+            the Weekly Cycle Proposal is subsequently voted down, the triggering Prime Delegate loses their entire AD Buffer.
           </td>
         </tr>
         <tr>
@@ -10034,16 +10047,6 @@
         </tr>
         <tr>
           <td>
-            <dfn>Excess
-              Funds - Element Annotation</dfn>
-          </td>
-          <td>Excess Funds - Element Annotation</td>
-          <td>Annotation</td>
-          <td>The element "excess funds" refers to the amount in the AD Buffer that exceeds the required one-month
-            budget threshold.</td>
-        </tr>
-        <tr>
-          <td>
             <dfn>Executive
               Sheet - Element Annotation</dfn>
           </td>
@@ -11207,6 +11210,34 @@
               Sheet - Element Annotation</dfn>.
           </td>
         </tr>
+            <tr>
+          <td>
+            <dfn>Prime Delegates Must Stake Their AD Buffer To Trigger Weekly Cycle Proposals</dfn>
+          </td>
+          <td>Prime Delegates Must Stake Their AD Buffer To Trigger Weekly Cycle Proposals</td>
+          <td>Action Tenet</td>
+          <td>
+            To deter spurious or misaligned proposals, Prime Delegates must “stake” their AD Buffer to trigger a 
+            Proposal. A Prime Delegate can trigger a Weekly Cycle Proposal only if their AD Buffer contains at least 
+            one (1) month’s worth of budget at the time of triggering the Proposal. This “staking” requirement of one 
+            month’s worth of budget remains in effect until the triggered Proposal is fully resolved - that is, until 
+            either (1) the Proposal is rejected by the Governance Facilitators for misalignment, or (2) a Sky Governance 
+            vote on the Proposal concludes in an approval or rejection. If the Proposal is voted down or rejected for 
+            misalignment, the PD will lose their entire AD Buffer.</dfn>.
+          </td>
+       </tr>
+            <tr>
+          <td>
+            <dfn>Prime Delegate Loss Of Rank After Triggering Proposal Is Inconsequential </dfn>
+          </td>
+          <td>Prime Delegate Loss Of Rank After Triggering Proposal Is Inconsequential </td>
+          <td>Action Tenet</td>
+          <td>
+            A Weekly Cycle Proposal is considered correctly triggered when the triggering Aligned Delegate is a Prime Delegate 
+            with at least one (1) month’s worth of budget in their AD Buffer at the time of triggering the Proposal. It is 
+            inconsequential if, after triggering the Proposal, the Prime Delegate loses Prime Delegate rank.</dfn>.
+          </td>
+        </tr>
         <tr>
           <td>
             <dfn>Unanimity
@@ -11393,6 +11424,40 @@
           <td>'Volunteer Discord moderator' is not a role that is formally defined in the Atlas. Therefore,
             Entity's first position as volunteer Discord moderator does not count as an ecosystem role. The
             Target Document is not triggered at all in this Scenario.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>Delay In Payment To Prime Delegate Triggering Proposal</dfn>
+          </td>
+          <td>Delay In Payment To Prime Delegate Triggering Proposal</td>
+          <td>Scenario</td>
+          <td>Entity is a Prime Delegate with one (1) month’s worth of budget in their AD Buffer. Entity triggers 
+            a Weekly Cycle Proposal. Immediately thereafter, Entity loses their Prime Delegate rank. Three days later, 
+            before the Proposal has been voted on, the Governance Facilitators distribute compensation to other 
+            Aligned Delegates but do not distribute compensation to Entity.</td>
+          <td>Aligned</td>
+          <td>Paying out the AD Buffer would have led to Entity’s AD Buffer dropping below the required threshold of 
+            one (1) month’s worth of budget while the Proposal was still unresolved. In this Scenario, the triggering 
+            AD cannot receive payout from the AD Buffer until the triggered Proposal is voted on and approved by Sky 
+            Governance. Assuming that the Proposal is approved, the Governance Facilitators are authorized to disburse 
+            the entire contents of the AD Buffer to the triggering AD in the next AD compensation cycle. However, if 
+            the Proposal is rejected by the Governance Facilitators for misalignment or voted down by Sky Governance, 
+            the triggering AD would lose their entire AD Buffer.</td>
+        </tr>
+             <tr>
+          <td>
+            <dfn>Prime Delegate Triggers Proposal And Loses Prime Delegate Rank Immediately Thereafter</dfn>
+          </td>
+          <td>Prime Delegate Triggers Proposal And Loses Prime Delegate Rank Immediately Thereafter</td>
+          <td>Scenario</td>
+          <td>Entity is a Prime Delegate with at least one (1) month’s worth of budget in their AD Buffer. Entity triggers 
+            a Weekly Cycle Proposal. Immediately thereafter, Entity loses their Prime Delegate rank. The Governance Facilitators 
+            continue to prepare a Governance Poll for the Proposal.</td>
+          <td>Aligned as to Entity. Aligned as to the Governance Facilitators.</td>
+          <td>The fact that Entity lost their Prime Delegate rank after triggering the Proposal is inconsequential. Entity satisfied 
+            the requirement of being a Prime Delegate with at least one (1) month’s worth of budget in their AD Buffer at the time 
+            of triggering the Proposal, and thus the Proposal was properly triggered. The Governance Facilitators acted correctly 
+            to prepare a Governance Poll for the Proposal in accord with the process definition for the Atlas Edit Weekly Cycle.</td>
         </tr>
       </tbody>
     </table>
