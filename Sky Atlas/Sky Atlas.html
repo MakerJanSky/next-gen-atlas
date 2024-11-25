@@ -8129,6 +8129,42 @@
         <tr>
           <td>
             <dfn>A.3.9
+              - Measures For Endgame Transition - SparkLend Risk Parameters - Flash Loan Enabled Definition</dfn>
+          </td>
+          <td>Measures For Endgame Transition - SparkLend Risk Parameters - Flash Loan Enabled Definition
+          </td>
+          <td>Core</td>
+          <td>If the Flash Loan Enabled parameter is activated, then the asset may be borrowed using a flash loan.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.3.9
+              - Measures For Endgame Transition - SparkLend Risk Parameters - Total Flash Loan Fee Definition</dfn>
+          </td>
+          <td>Measures For Endgame Transition - SparkLend Risk Parameters - Total Flash Loan Fee Definition
+          </td>
+          <td>Core</td>
+          <td>The Total Flash Loan Fee incorporates a fee paid to the protocol and a fee paid to liquidity providers. This total fee is 
+              calculated as a percentage of the flash loan amount. Of the Total Flash Loan Fee, the Protocol Flash Loan Fee is paid to the 
+              protocol, with the remainder paid to liquidity providers.
+              The Total Flash Loan Fee is set on a protocol level, regardless of what assets are being borrowed.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.3.9
+              - Measures For Endgame Transition - SparkLend Risk Parameters - Protocol Flash Loan Fee Definition</dfn>
+          </td>
+          <td>Measures For Endgame Transition - SparkLend Risk Parameters - Protocol Flash Loan Fee Definition
+          </td>
+          <td>Core</td>
+          <td>The Protocol Flash Loan Fee is the fee for a flash loan paid to the protocol as a percentage of the flash loan amount.
+              The Protocol Flash Loan Fee is set on a protocol level, regardless of what assets are being borrowed.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.3.9
               - Measures For Endgame Transition - SparkLend Risk Parameters - Modification</dfn>
           </td>
           <td>Measures For Endgame Transition - SparkLend Risk Parameters - Modification</td>
@@ -8153,8 +8189,7 @@
           </td>
           <td>Measures For Endgame Transition - SparkLend Risk Parameters - Current Configuration</td>
           <td>Core</td>
-          <td>The subdocuments herein define the current configuration of the SparkLend risk parameters for each
-            collateral type.</td>
+          <td>The subdocuments herein define the current configuration of the SparkLend risk parameters.</td>
         </tr>
         <tr>
           <td>
@@ -8163,11 +8198,11 @@
           </td>
           <td>Measures For Endgame Transition - SparkLend Risk Parameters - GNO Risk Parameters</td>
           <td>Core</td>
-          <td>The current GNO risk parameters are:• LTV: 0%• Liquidation Threshold: 25%* E-mode Category: N/A•
+          <td>The current GNO risk parameters are:• LTV: 0%• Liquidation Threshold: 25%• E-mode Category: N/A•
             Liquidation Bonus: 10%• Reserve Factor: 0%• Supply Cap: N/A• Borrow Cap: N/A• Optimal Utilization:
             100%• Isolated Debt Ceiling: $5,000,000• Base Rate: 1%• Slope 1: 0%• Slope 2: 0%• Reserve State:
             Frozen• Collateral: Yes• Borrowing: No• Isolated Collateral: Yes• Isolated Borrowing: No• Siloed
-            Borrowing: No</td>
+            Borrowing: No• Flash Loan Enabled: No</td>
         </tr>
         <tr>
           <td>
@@ -8176,12 +8211,13 @@
           </td>
           <td>Measures For Endgame Transition - SparkLend Risk Parameters - Dai Risk Parameters</td>
           <td>Core</td>
-          <td>The current Dai risk parameters are:• LTV: 0%• Liquidation Threshold: 0.01%* E-mode Category: N/A•
+          <td>The current Dai risk parameters are:• LTV: 0%• Liquidation Threshold: 0.01%• E-mode Category: N/A•
             Liquidation Bonus: 4.5%• Reserve Factor: 0%• Supply Cap: N/A• Borrow Cap: N/A• Optimal Utilization:
             N/A• Isolated Debt Ceiling: N/A• Base Rate: N/A• Slope 1: N/A• Slope 2: N/A• Reserve State: Active•
             Collateral: Yes• Borrowing: Yes• Isolated Collateral: No• Isolated Borrowing: Yes• Siloed Borrowing:
-            NoThe Dai Borrow Rate is set directly by the Stability Facilitators in consultation with the
-            Stability Scope Advisors, and is currently equal to 7%, which is the Dai Savings Rate plus 1%.</td>
+            No• Flash Loan Enabled: Yes
+            The Dai Borrow Rate is set directly by the Stability Facilitators in consultation with the Stability Scope Advisors, and is 
+            currently equal to 8.50%, which is the Dai Savings Rate plus 1%.</td>
         </tr>
         <tr>
           <td>
@@ -8190,11 +8226,11 @@
           </td>
           <td>Measures For Endgame Transition - SparkLend Risk Parameters - WETH Risk Parameters</td>
           <td>Core</td>
-          <td>The current WETH risk parameters are:• LTV: 82%• Liquidation Threshold: 83%* E-mode Category: ETH•
+          <td>The current WETH risk parameters are:• LTV: 82%• Liquidation Threshold: 83%• E-mode Category: ETH•
             Liquidation Bonus: 5%• Reserve Factor: 5%• Supply Cap: Set by cap automater• Borrow Cap: Set by cap
             automater• Optimal Utilization: 90%• Isolated Debt Ceiling: N/A• Base Rate: 0%• Slope 1: 2.82%•
             Slope 2: 120%• Reserve State: Active• Collateral: Yes• Borrowing: Yes• Isolated Collateral: No•
-            Isolated Borrowing: No• Siloed Borrowing: No</td>
+            Isolated Borrowing: No• Siloed Borrowing: No• Flash Loan Enabled: Yes</td>
         </tr>
         <tr>
           <td>
@@ -8203,11 +8239,11 @@
           </td>
           <td>Measures For Endgame Transition - SparkLend Risk Parameters - USDT Risk Parameters</td>
           <td>Core</td>
-          <td>The current USDT risk parameters are:• LTV: 0%• Liquidation Threshold: 0%* E-mode Category: USD•
+          <td>The current USDT risk parameters are:• LTV: 0%• Liquidation Threshold: 0%• E-mode Category: USD•
             Liquidation Bonus: 0%• Reserve Factor: 5%• Supply Cap: 30,000,000 USDT• Borrow Cap: Set by cap
             automater• Optimal Utilization: 95%• Isolated Debt Ceiling: N/A• Base Rate: 0%• Slope 1: 6.83%•
             Slope 2: 15%• Reserve State: Active• Collateral: No• Borrowing: Yes• Isolated Collateral: No•
-            Isolated Borrowing: No• Siloed Borrowing: No</td>
+            Isolated Borrowing: No• Siloed Borrowing: No• Flash Loan Enabled: Yes</td>
         </tr>
         <tr>
           <td>
@@ -8216,11 +8252,11 @@
           </td>
           <td>Measures For Endgame Transition - SparkLend Risk Parameters - WBTC Risk Parameters</td>
           <td>Core</td>
-          <td>The current WBTC risk parameters are:• LTV: 0%• Liquidation Threshold: 75%* E-mode Category: N/A•
+          <td>The current WBTC risk parameters are:• LTV: 0%• Liquidation Threshold: 75%• E-mode Category: N/A•
             Liquidation Bonus: 7%• Reserve Factor: 20%• Supply Cap: Set by cap automater• Borrow Cap: Set by cap
             automater• Optimal Utilization: 60%• Isolated Debt Ceiling: N/A• Base Rate: 0%• Slope 1: 2%• Slope
             2: 300%• Reserve State: Active• Collateral: Yes• Borrowing: No• Isolated Collateral: No• Isolated
-            Borrowing: No• Siloed Borrowing: No</td>
+            Borrowing: No• Siloed Borrowing: No• Flash Loan Enabled: No</td>
         </tr>
         <tr>
           <td>
@@ -8229,11 +8265,11 @@
           </td>
           <td>Measures For Endgame Transition - SparkLend Risk Parameters - sDai Risk Parameters</td>
           <td>Core</td>
-          <td>The current sDai risk parameters are:• LTV: 79%• Liquidation Threshold: 80%* E-mode Category: USD•
+          <td>The current sDai risk parameters are:• LTV: 79%• Liquidation Threshold: 80%• E-mode Category: USD•
             Liquidation Bonus: 5%• Reserve Factor: 10%• Supply Cap: Set by cap automater• Borrow Cap: N/A•
             Optimal Utilization: 100%• Isolated Debt Ceiling: N/A• Base Rate: 1%• Slope 1: 0%• Slope 2: 0%•
             Reserve State: Active• Collateral: Yes• Borrowing: No• Isolated Collateral: No• Isolated Borrowing:
-            No• Siloed Borrowing: No</td>
+            No• Siloed Borrowing: No• Flash Loan Enabled: No</td>
         </tr>
         <tr>
           <td>
@@ -8242,11 +8278,11 @@
           </td>
           <td>Measures For Endgame Transition - SparkLend Risk Parameters - wstETH Risk Parameters</td>
           <td>Core</td>
-          <td>The current wstETH risk parameters are:• LTV: 79%• Liquidation Threshold: 80%* E-mode Category: ETH•
+          <td>The current wstETH risk parameters are:• LTV: 79%• Liquidation Threshold: 80%• E-mode Category: ETH•
             Liquidation Bonus: 7%• Reserve Factor: 15%• Supply Cap: Set by cap automater• Borrow Cap: Set by cap
             automater• Optimal Utilization: 45%• Isolated Debt Ceiling: N/A• Base Rate: 0.25%• Slope 1: 4.5%•
             Slope 2: 80%• Reserve State: Active• Collateral: Yes• Borrowing: Yes• Isolated Collateral: No•
-            Isolated Borrowing: No• Siloed Borrowing: No</td>
+            Isolated Borrowing: No• Siloed Borrowing: No• Flash Loan Enabled: Yes</td>
         </tr>
         <tr>
           <td>
@@ -8255,11 +8291,11 @@
           </td>
           <td>Measures For Endgame Transition - SparkLend Risk Parameters - USDC Risk Parameters</td>
           <td>Core</td>
-          <td>The current USDC risk parameters are:• LTV: 0%• Liquidation Threshold: 0%* E-mode Category: USD•
+          <td>The current USDC risk parameters are:• LTV: 0%• Liquidation Threshold: 0%• E-mode Category: USD•
             Liquidation Bonus: 0%• Reserve Factor: 5%• Supply Cap: 60,000,000 USDC• Borrow Cap: Set by cap
             automater• Optimal Utilization: 95%• Isolated Debt Ceiling: N/A• Base Rate: 0%• Slope 1: 6.83%•
             Slope 2: 15%• Reserve State: Active• Collateral: No• Borrowing: Yes• Isolated Collateral: No•
-            Isolated Borrowing: No• Siloed Borrowing: No</td>
+            Isolated Borrowing: No• Siloed Borrowing: No• Flash Loan Enabled: Yes</td>
         </tr>
         <tr>
           <td>
@@ -8268,11 +8304,11 @@
           </td>
           <td>Measures For Endgame Transition - SparkLend Risk Parameters - weETH Risk Parameters</td>
           <td>Core</td>
-          <td>The current weETH risk parameters are:• LTV: 72%• Liquidation Threshold: 73%* E-mode Category: N/A•
+          <td>The current weETH risk parameters are:• LTV: 72%• Liquidation Threshold: 73%• E-mode Category: N/A•
             Liquidation Bonus: 10%• Reserve Factor: 15%• Supply Cap: 61,131 weETH• Borrow Cap: N/A• Optimal
             Utilization: 45%• Isolated Debt Ceiling: $200,000,000• Base Rate: 5%• Slope 1: 15%• Slope 2: 300%•
             Reserve State: Active• Collateral: Yes• Borrowing: No• Isolated Collateral: Yes• Isolated Borrowing:
-            No• Siloed Borrowing: No</td>
+            No• Siloed Borrowing: No• Flash Loan Enabled: Yes</td>
         </tr>
         <tr>
           <td>
@@ -8281,11 +8317,29 @@
           </td>
           <td>Measures For Endgame Transition - SparkLend Risk Parameters - rETH Risk Parameters</td>
           <td>Core</td>
-          <td>The current rETH risk parameters are:• LTV: 79%• Liquidation Threshold: 80%* E-mode Category: ETH•
+          <td>The current rETH risk parameters are:• LTV: 79%• Liquidation Threshold: 80%• E-mode Category: ETH•
             Liquidation Bonus: 7%• Reserve Factor: 15%• Supply Cap: Set by cap automater• Borrow Cap: Set by cap
             automater• Optimal Utilization: 45%• Isolated Debt Ceiling: N/A• Base Rate: 0.25%• Slope 1: 7%•
             Slope 2: 300%• Reserve State: Active• Collateral: Yes• Borrowing: Yes• Isolated Collateral: No•
-            Isolated Borrowing: No• Siloed Borrowing: No</td>
+            Isolated Borrowing: No• Siloed Borrowing: No• Flash Loan Enabled: Yes</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.3.9
+              - Measures For Endgame Transition - SparkLend Risk Parameters - Total Flash Loan Fee Current Value</dfn>
+          </td>
+          <td>Measures For Endgame Transition - SparkLend Risk Parameters - Total Flash Loan Fee Current Value</td>
+          <td>Core</td>
+          <td>The Total Flash Loan Fee is 0.00%.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.3.9
+              - Measures For Endgame Transition - SparkLend Risk Parameters - Protocol Flash Loan Fee Current Value</dfn>
+          </td>
+          <td>Measures For Endgame Transition - SparkLend Risk Parameters - Protocol Flash Loan Fee Current Value</td>
+          <td>Core</td>
+          <td>The Protocol Flash Loan Fee is 0.00%.</td>
         </tr>
         <tr>
           <td>
