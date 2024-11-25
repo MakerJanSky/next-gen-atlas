@@ -3497,6 +3497,332 @@
         </tr>
         <tr>
           <td>
+            <dfn>A.1.9
+              - A4 - Sky Core Governance Security - Emergency Spells</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells</td>
+          <td>Section</td>
+          <td>The subdocuments herein govern the management of emergencies whose resolution requires an Executive Vote.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - Emergency Spells Definition</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - Emergency Spells Definition</td>
+          <td>Core</td>
+          <td>Emergency Spells are expedited ad hoc spells that, while typically compliant with all customary quality-assurance processes, 
+              do not adhere to the normal spell cadence. Emergency Spells solve the root issue of an emergency / urgent situation 
+              impacting the Protocol and are used when a rapid response time is needed. The Support and Governance Facilitators are 
+              responsible for managing the use of Emergency Spells pursuant to <dfn>A.1.8 - Emergency Response System - Emergency Response 
+              - Facilitators’s Roles And Responsibilities</dfn> and <dfn>A.1.8 - Emergency Response System - Emergency Response - Known 
+              And Uncontentious Remedies</dfn>.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - Standby Spells</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - Standby Spells</td>
+          <td>Core</td>
+          <td>A subset of Emergency Spells is Standby Spells.
+              Standby Spells allow Sky Governance to bypass the GSM Pause Delay and directly perform crucial actions such as stopping an 
+              oracle, setting a debt ceiling to zero, disabling a D3M integration, or stopping liquidations for a collateral. Standby 
+              Spells or the factory contracts used to deploy them are reusable, meaning they can be executed several times if needed, or 
+              voted on again on a later date to be executed again.
+              The subdocuments herein specify the authorized use of Standby Spells.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - Standby Spells Definition</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - Standby Spells Definition</td>
+          <td>Core</td>
+          <td>Sky Protocol uses circuit-breakers to mitigate undesired scenarios, which circuit-breakers are called MOM contracts. MOM 
+            contracts must first be triggered through a spell, after which they bypass the GSM Pause Delay and can immediately act on the 
+            Protocol. See <dfn>A.1.9 - Sky Core Governance Security - Governance Security Delay Requirements - Exceptions</dfn>.
+            In emergency scenarios, time is a scarce resource. Therefore, Standby Spells are used in validated emergency scenarios to 
+            trigger a MOM contract. In an emergency situation, spell teams can then focus on crafting an ad hoc Emergency Spell to solve 
+            the root cause of an issue, if appropriate. Due to Standby Spells, it is no longer necessary in an emergency for spell teams 
+            to spend time crafting and reviewing a spell whose sole purpose is to trigger a mitigation of the issue, i.e., the MOM 
+            contract.
+            Standby Spells open new attack vectors that must be mitigated pursuant to <dfn>A.1.9 - Sky Core Governance Security - 
+            Emergency Spells - ADs’ Role In Standby Spells</dfn>.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - Standby Spell Incorporation Into New MOM Contracts</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - Standby Spell Incorporation Into New MOM Contracts</td>
+          <td>Core</td>
+          <td>Each new MOM contract created must incorporate a Standby Spell or Standby Spell factory, which can be used to create new 
+              Standby Spells that can trigger the MOM contract. With a Standby Spell per every MOM contract, the generation of technical 
+              debt can be avoided.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - Available Standby Spells</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - Available Standby Spells</td>
+          <td>Core</td>
+          <td>The currently available Standby Spells are defined in the subdocuments herein.
+              The following list of Standby Spells is not exhaustive: that is, the Support Facilitators, in collaboration with the 
+              Emergency Response Group and spell teams, have the discretion to develop and use a Standby Spell that is not listed in the 
+              subdocuments below. When that occurs, however, the Support Facilitators must ensure that the new Standby Spell is 
+              subsequently added to the subdocuments below.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - Single-Collateral Standby Spells</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - Single-Collateral Standby Spells</td>
+          <td>Core</td>
+          <td>The subdocuments herein define currently available single-collateral Standby Spells. For each instance of use, 
+              single-collateral contracts require a transaction to deploy the Standby Spell from a factory.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - SingleLineWipeSpell</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - SingleLineWipeSpell</td>
+          <td>Core</td>
+          <td>This Standby Spell will perform a Line MOM Wipe (set debt ceiling to zero) for a single collateral. It can be used if a 
+            collateral fails - for example, if a stablecoin depegs or the protocol that provides the token is hacked. Users will still be 
+            able to exit their positions, but no new debt will be allowed to be created for the collateral.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - SingleClipBreakerSpell</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - SingleClipBreakerSpell</td>
+          <td>Core</td>
+          <td>This Standby Spell can be used in an emergency to stop liquidations for a single collateral.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - SingleOsmStopSpell</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - SingleOsmStopSpell</td>
+          <td>Core</td>
+          <td>This Standby Spell can be used in an emergency to freeze an OSM for a single collateral. If the oracle price provider fails 
+              for any reason, Governance can act before the OSM registers the next price; this allows for the problem to be fixed with no 
+              impact on the system.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - SingleDdmDisableSpell</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - SingleDdmDisableSpell</td>
+          <td>Core</td>
+          <td>This Standby Spell can be used in an emergency to disable a D3M integration. If a D3M partner is experiencing a problem such 
+              as a hack, this emergency spell can be used to prevent abuse. While it cannot recover Dai already injected into the 
+              compromised protocol, the Emergency Spell can prevent additional exposure.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - Multi-Collateral Standby Spells</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - Multi-Collateral Standby Spells</td>
+          <td>Core</td>
+          <td>The subdocuments herein define currently available multi-collateral Standby Spells. Multi-collateral contracts are spells in 
+              themselves and are thus reusable; beyond the initial deployment of the contract, no further deployment is needed.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - MultiLineWipeSpell</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - MultiLineWipeSpell</td>
+          <td>Core</td>
+          <td>This Standby Spell will wipe all lines, setting the debt ceilings for all collaterals (lines) to zero. Users will still be 
+              able to exit their positions, but no new debt will be allowed to be created for any collateral.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - MultiClipBreakerSpell</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - MultiClipBreakerSpell</td>
+          <td>Core</td>
+          <td>This Standby Spell will freeze liquidations for all collaterals.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - MultiOsmStopSpell</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - MultiOsmStopSpell</td>
+          <td>Core</td>
+          <td>This Standby Spell will freeze all OSMs. If the oracle price provider fails for any reason, Governance can act before the 
+              OSM registers the next price; this allows for the problem to be fixed with no impact on the system.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - Standby Spell Process Definition</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - Standby Spell Process Definition</td>
+          <td>Core</td>
+          <td>The subdocuments herein define the process for using Standby Spells.</td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - Support Scope Facilitators’ Role In Standby Spells</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - Support Scope Facilitators’ Role In Standby Spells</td>
+          <td>Core</td>
+          <td>The role of the Support Facilitators in the Standby Spell process is as follows:
+              • Standby Spells can only be used in response to a properly validated and categorized emergency scenario, for which the 
+              Support Facilitators are responsible. See <def>A.1.8 - Emergency Response System - Emergency Response - Incident 
+              Validation</def> and <dfn>A.1.8 - Emergency Response System - Emergency Response - Incident Categorization</dfn>.
+              The decision to use a Standby Spell is reserved for the Support Facilitators; where possible, the Support Facilitators 
+              should consult with the responsible Facilitator of the impacted Scope(s) and any relevant Scope Advisor(s). See <dfn>A.1.8 - 
+              Emergency Response System - Emergency Response - Facilitators’s Roles And Responsibilities</dfn>.
+              • The Support Facilitators must explicitly communicate the decision to use a Standby Spell in the secure, private 
+              communication channel specified in <dfn>A.1.8 - Emergency Response System - Emergency Response - Emergency Response Signal 
+              Group</dfn> or on a “war room” video call.
+              • If the decision to use a Standby Spell is first reached on a video call, the Support Facilitators are required thereafter 
+              to promptly document their decision in the secure, private communication channel specified in <dfn>A.1.8 - Emergency 
+              Response System - Emergency Response - Emergency Response Signal Group</dfn>.
+              • After the Support Facilitators decide to use a Standby Spell, TechOps must promptly trigger an incident to the Emergency 
+              Response Group as specified in <dfn>A.1.8 - Emergency Response System - Emergency Response - Emergency-Contact Mechanism 
+              Trigger</dfn>.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - Governance Facilitators’ Role In Standby Spells</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - Governance Facilitators’ Role In Standby Spells</td>
+          <td>Core</td>
+          <td>All Governance Facilitators must promptly acknowledge receipt of the Support Facilitators’ decision to use a Standby Spell. 
+            This acknowledgment must take place in the communication channel specified in <dfn>A.1.8 - Emergency Response System - 
+            Emergency Response - Emergency Response Signal Group</dfn>.
+            The Governance Facilitators are responsible for actioning the Standby Spell and liaising with the Prime Delegates (and other 
+            Aligned Delegates as needed) to gather the necessary support for it.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - Requirement To Validate Authenticity Of Standby Spell</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - Requirement To Validate Authenticity Of Standby Spell</td>
+          <td>Core</td>
+          <td>All Governance Facilitators, as defined in the subdocument below, are required to validate the authenticity of the Standby Spell.
+              This validation must be in the form of a written communication in the secure channel specified in <dfn>A.1.8 - Emergency 
+              Response System - Emergency Response - Emergency Response Signal Group</dfn>. Only the entities specified in <dfn>A.1.9 - 
+              Sky Core Governance Security - Emergency Spells - Current Entities Authorized To Validate Authenticity of Standby 
+              Spell</dfn> are authorized to provide the validation of authenticity.
+              Pursuant to <dfn>A.1.9 - Sky Core Governance Security - Emergency Spells - ADs’ Role In Standby Spells</dfn>, ADs are 
+              prohibited from voting for a Standby Spell without this validation of authenticity.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - Current Entities Authorized To Validate Authenticity of Standby Spell</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - Current Entities Authorized To Validate Authenticity of Standby Spell</td>
+          <td>Core</td>
+          <td>This document defines the term “Governance Facilitators” as used in <dfn>A.1.9 - Sky Core Governance Security - Emergency 
+              Spells - Requirement To Validate Authenticity of Standby Spell</dfn>.
+              The entities listed below are authorized to validate the authenticity of a Standby Spell:
+              • JanSky
+              • VoteWizard
+              The authorized entities are not to be interpreted as the collective identity of the Governance Facilitator teams. Rather, the authorized entities are synonymous with the Sky Forum account holders with the following handles:
+              • JanSky
+              • votewizard
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - Custom Spell Voting For Standby Spells</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - Custom Spell Voting For Standby Spells</td>
+          <td>Core</td>
+          <td>The Governance Facilitators may use the Custom Spell Voting Page when it is beneficial to coordinate voting without having a 
+              visible spell on the Voting Portal. The Governance Facilitators must not use this method unless domain expert Ecosystem 
+              Actors in the Emergency Response Group have recommended this approach; such recommendation must be explicitly documented in 
+              the communication channel specified in <dfn>A.1.8 - Emergency Response System - Emergency Response - Emergency Response 
+              Signal Group</dfn>.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - ADs’ Role In Standby Spells</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - ADs’ Role In Standby Spells</td>
+          <td>Core</td>
+          <td>ADs are strictly prohibited from acting on a Standby Spell unless they have first confirmed all of the following 
+              requirements:
+              • Receipt of the Support Facilitator’s official notification of the emergency scenario in the Emergency Contact Mechanism 
+              specified in <dfn>A.1.8 - Emergency Response System - Emergency Response - Emergency-Contact Mechanism Trigger</dfn>.
+              • Receipt of the Support Facilitators’ announcement of a Standby Spell in the communication channel specified in <dfn>A.1.8 
+              - Emergency Response System - Emergency Response - Emergency Response Signal Group</dfn>; and
+              • All Governance Facilitators have validated the authenticity of the Standby Spell. This validation must fulfill two 
+              requirements: (1) the validation must be in the form of a written communication in the secure channel specified in <dfn>A.1.8 
+              - Emergency Response System - Emergency Response - Emergency Response Signal Group</dfn>; and (2) the validation must be 
+              provided by the authorized entities listed in <dfn>A.1.9 - Sky Core Governance Security - Emergency Spells - Current 
+              Entities Authorized To Validate Authenticity of Standby Spell</dfn>.
+              After ADs have confirmed all requirements are met, they must either promptly vote to approve the Standby Spell, or 
+              communicate any concerns to the Governance Facilitators and collaborate with the latter for a speedy resolution.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - AD Reliance On Governance Facilitators In Standby Spell Process Where Governance Facilitator Is Nonresponsive</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - AD Reliance On Governance Facilitators In Standby Spell Process Where Governance Facilitator Is Nonresponsive</td>
+          <td>Core</td>
+          <td>There is an exception to the requirement that all Governance Facilitators must validate the authenticity of a Standby Spell. 
+              In situations where a Governance Facilitator has failed to respond to the emergency situation, the Support Facilitators may 
+              temporarily grant the responding Governance Facilitator(s) the sole authority to validate the authenticity of the Emergency 
+              Spell pursuant to <dfn>A.1.9 - Sky Core Governance Security - Emergency Spells - ADs’ Role In Standby Spells</dfn>. The 
+              Support Facilitators must communicate this in writing in the secure channel specified in <dfn>A.1.8 - Emergency Response 
+              System - Emergency Response - Emergency Response Signal Group</dfn>.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - Misalignment To Vote For Unvalidated Standby Spell</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - Misalignment To Vote For Unvalidated Standby Spell</td>
+          <td>Core</td>
+          <td>It is severe misalignment for an Aligned Delegate to vote for a Standby Spell whose authenticity has not been validated 
+            pursuant to <dfn>A.1.9 - Sky Core Governance Security - Emergency Spells - ADs’ Role In Standby Spells</dfn>. Aligned 
+            Delegates in breach of this requirement must be immediately derecognized and their full AD Buffer should be confiscated.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <dfn>A.1.9
+              - Sky Core Governance Security - Emergency Spells - Accountability</dfn>
+          </td>
+          <td>Sky Core Governance Security - Emergency Spells - Accountability</td>
+          <td>Core</td>
+          <td>Breach of any requirement concerning Emergency Spells - including Standby Spells - constitutes misalignment and must be 
+              addressed pursuant to <dfn>A.1.8 - Emergency Response System - Emergency Response - Accountability For Emergency Response 
+              Preparedness</dfn>.
+          </td>
+        </tr>
+        <tr>
+          <td>
             <dfn>A.1.11
               - A1 - Weekly Governance Cycle - Operational Weekly Cycle</dfn>
           </td>
